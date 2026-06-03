@@ -1,0 +1,22 @@
+[
+  {
+    "icao24": "abc123",
+    "callsign": "AFL123",
+    "origin_country": "Russia",
+    "velocity": 850.5,
+    "geo_altitude": 10500.0,
+    "longitude": 37.6176,
+    "latitude": 55.7558,
+    "on_ground": false
+  },
+  {
+    "icao24": "def456",
+    "callsign": "SVO789",
+    "origin_country": "Russia",
+    "velocity": 820.3,
+    "geo_altitude": 11200.0,
+    "longitude": 30.2642,
+    "latitude": 59.8944,
+    "on_ground": false
+  }
+]

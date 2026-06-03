@@ -1,0 +1,62 @@
+[project]
+name = "pythonkursovaya-2"
+version = "0.1.0"
+description = "Add your description here"
+requires-python = ">=3.14"
+dependencies = [
+    "pytest>=9.0.3",
+    "pytest-cov>=7.1.0",
+    "requests>=2.34.2",
+]
+
+[dependency-groups]
+dev = [
+    "black>=26.5.1",
+    "flake8>=7.3.0",
+    "isort>=8.0.1",
+    "mypy>=2.1.0",
+    "pytest>=9.0.3",
+    "pytest-cov>=7.1.0",
+]
+
+[tool.flake8]
+max-line-length = 119
+ignore = "E501"
+exclude = ".git, __pycache__, .venv, .env, venv, env, build, dist"
+
+[black]
+max-line-length = 119
+exclude = ".git"
+
+[isort]
+max-line-length = 119
+
+[mypy]
+disallow_untyped_defs = true
+warn_return_any = true
+exclude = ".venv"
+
+[tool.mypy]
+python_version = "3.9"
+strict = true
+follow_imports = "silent"
+ignore_missing_imports = true
+disallow_untyped_defs = true
+warn_return_any = true
+warn_unused_configs = true
+explicit_package_bases = true
+namespace_packages = true
+mypy_path = "src"
+
+[[tool.mypy.overrides]]
+module = "requests"
+ignore_missing_imports = true
+
+
+
+# Отключаем проверку типов для декораторов
+disable_error_code = [
+    "type-arg",
+    "untyped-decorator",
+    "no-untyped-def"
+]
